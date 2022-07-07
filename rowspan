@@ -1,0 +1,26 @@
+  protected void gridPendingStatus_RowDataBound(object sender, GridViewRowEventArgs e)
+    {
+        for (int i = gridPendingStatus.Rows.Count - 1; i > 0; i--)
+        {
+            GridViewRow row = gridPendingStatus.Rows[i];
+            GridViewRow previousRow = gridPendingStatus.Rows[i - 1];
+            for (int j = 0; j < row.Cells.Count; j++)
+            {
+                if (row.Cells[j].Text == previousRow.Cells[j].Text)
+                {
+                    if (previousRow.Cells[j].RowSpan == 0)
+                    {
+                        if (row.Cells[j].RowSpan == 0)
+                        {
+                            previousRow.Cells[j].RowSpan += 3;
+                        }
+                        else
+                        {
+                            previousRow.Cells[j].RowSpan = row.Cells[j].RowSpan + 1;
+                        }
+                        row.Cells[j].Visible = false;
+                    }
+                }
+            }
+        }
+    }
