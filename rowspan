@@ -24,3 +24,20 @@
             }
         }
     }
+
+
+//anothoer code for merge row  in  grid view
+
+
+        for (int rowIndex = gridPendingStatus.Rows.Count - 2; rowIndex >= 0; rowIndex--)
+        {
+            GridViewRow row = gridPendingStatus.Rows[rowIndex];
+            GridViewRow previousRow = gridPendingStatus.Rows[rowIndex + 1];
+
+            if (row.Cells[0].Text == previousRow.Cells[0].Text)
+            {
+                row.Cells[0].RowSpan = previousRow.Cells[0].RowSpan < 2 ? 2 :
+                                       previousRow.Cells[0].RowSpan + 1;
+                previousRow.Cells[0].Visible = false;
+            }
+        }
