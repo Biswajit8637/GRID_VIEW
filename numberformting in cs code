@@ -1,0 +1,8 @@
+ lblExceptDoublePayment.Text = Convert.ToInt32(dS.Tables[0].Rows[1]["Amount"].ToString()).ToString("#,##0.00");
+                        lblDoublePayment.Text = Convert.ToInt32(dS.Tables[0].Rows[1]["Amount"].ToString()).ToString("#,##0.00");
+                        lblCollegeAmount.Text = Convert.ToInt32(dS.Tables[0].Rows[1]["Amount"].ToString()).ToString("#,##0.00");
+                        lblRefundAmount.Text = Convert.ToInt32(dS.Tables[0].Rows[1]["Amount"].ToString()).ToString("#,##0.00");
+                        lblCLCAmount.Text = Convert.ToInt32(dS.Tables[0].Rows[1]["Amount"].ToString()).ToString("#,##0.00");
+                        lblNAAMT.Text = Convert.ToInt32(dS.Tables[0].Rows[1]["Amount"].ToString()).ToString("#,##0.00");
+
+for number formating in asp
